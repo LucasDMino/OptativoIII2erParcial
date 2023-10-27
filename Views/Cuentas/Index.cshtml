@@ -1,0 +1,41 @@
+@model IEnumerable<OPTATIVOIII3ERPARCIAL.Models.Cuentas>
+
+<h2>Cuentas</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id Cliente</th>
+            <th>Número de Cuenta</th>
+            <th>Fecha de Alta</th>
+            <th>Tipo de Cuenta</th>
+            <th>Estado</th>
+            <th>Saldo</th>
+            <th>Número de Contrato</th>
+            <th>Costo de Mantenimiento</th>
+            <th>Promedio de Acreditación</th>
+            <th>Moneda</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cuenta in Model)
+        {
+            <tr>
+                <td>@cuenta.idCuenta</td>
+                <td>@cuenta.idCliente</td>
+                <td>@cuenta.NroCuenta</td>
+                <td>@cuenta.FechaAlta</td>
+                <td>@cuenta.TipoCuenta</td>
+                <td>@cuenta.Estado</td>
+                <td>@cuenta.Saldo</td>
+                <td>@cuenta.Nro_Contrato</td>
+                <td>@cuenta.CostoMantenimiento</td>
+                <td>@cuenta.PromedioAcreditacion</td>
+                <td>@cuenta.Moneda</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Home">Volver a Home</a>
