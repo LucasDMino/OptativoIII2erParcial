@@ -1,0 +1,26 @@
+@model IEnumerable<OPTATIVOIII3ERPARCIAL.Models.Ciudad>
+
+<h2>Ciudades</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Código Postal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ciudad in Model)
+        {
+            <tr>
+                <td>@ciudad.idCiudad</td>
+                <td>@ciudad.CiudadNombre</td>
+                <td>@ciudad.Departamento</td>
+                <td>@ciudad.PostalCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Home">Volver a Home</a>
