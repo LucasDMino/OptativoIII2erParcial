@@ -1,0 +1,17 @@
+@model OPTATIVOIII3ERPARCIAL.Models.Cliente
+
+<h2>Editar Cliente</h2>
+
+<form method="post" action="/api/Cliente/@Model.idCliente">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="idPersona">Id Persona:</label><br>
+    <input type="text" id="idPersona" name="idPersona" value="@Model.idPersona"><br>
+    <label for="Calificacion">Calificación:</label><br>
+    <input type="text" id="Calificacion" name="Calificacion" value="@Model.Calificacion"><br>
+    <label for="Estado">Estado:</label><br>
+    <input type="text" id="Estado" name="Estado" value="@Model.Estado"><br>
+    <input type="submit" value="Guardar cambios">
+</form>
+
+<a href="/Home">Volver a Home</a>
+
