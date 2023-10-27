@@ -1,0 +1,17 @@
+@model OPTATIVOIII3ERPARCIAL.Models.Persona
+
+<h2>¿Estás seguro de que quieres eliminar esta persona?</h2>
+
+<form method="post" action="/api/Persona/@Model.idPersona">
+    <!-- Detalles de la persona -->
+
+    <input type="submit" value="Eliminar">
+</form>
+
+<a href="/Home">Volver a Home</a>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
