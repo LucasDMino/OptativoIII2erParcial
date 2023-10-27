@@ -1,0 +1,21 @@
+@model OPTATIVOIII3ERPARCIAL.Models.Cliente
+
+<h2>¿Estás seguro de que quieres eliminar este cliente?</h2>
+
+<form method="post" action="/api/Cliente/@Model.idCliente">
+    <input type="hidden" name="_method" value="DELETE">
+    <p>Id: @Model.idCliente</p>
+    <p>Id Persona: @Model.idPersona</p>
+    <p>Fecha de Ingreso: @Model.FechaIngreso</p>
+    <p>Calificación: @Model.Calificacion</p>
+    <p>Estado: @Model.Estado</p>
+    <input type="submit" value="Eliminar">
+</form>
+
+<a href="/Home">Volver a Home</a>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
